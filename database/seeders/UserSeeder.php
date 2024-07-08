@@ -13,13 +13,13 @@ class UserSeeder extends Seeder
         User::create([
             'rool_id' => 1,
             'name' => 'Meneger',
-            'email' => 'Meneger@gmail.com',
+            'email' => 'meneger@gmail.com',
             'password' => Hash::make('12345678')
         ]);
         User::create([
             'rool_id' => 2,
             'name' => 'Clent',
-            'email' => 'Clent@gmail.com',
+            'email' => 'clent@gmail.com',
             'password' => Hash::make('12345678')
         ]);
     }
