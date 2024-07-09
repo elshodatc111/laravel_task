@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 use App\Models\Application;
+use App\Models\User;
+use App\Mail\ApplicationCreateted;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 
 class ApplicationController extends Controller
@@ -32,6 +35,7 @@ class ApplicationController extends Controller
             'message' => $request->message,
             'file_url' => $path??null
         ]);
+
 
         return redirect()->back();
 

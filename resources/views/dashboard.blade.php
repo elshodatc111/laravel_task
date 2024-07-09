@@ -11,122 +11,37 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     @if(auth()->user()->rool->name == 'meneger')
                         <span class="text-blue-500 font-bold text-xl">Meneger</span>
+                        @foreach($application as $item)
                         <div class='mt-3'>  
                             <div class="rounded-xl border p-5 shadow-md w-12/12 bg-white">
                                 <div class="flex w-full items-center justify-between border-b pb-3">
                                     <div class="flex items-center space-x-3">
                                         <div class="h-8 w-8 rounded-full bg-slate-400 bg-[url('https://i.pravatar.cc/32')]"></div>
-                                        <div class="text-lg font-bold text-slate-700">Joe Smith</div>
+                                        <div class="text-lg font-bold text-slate-700">{{ $item->user->name }}</div>
                                     </div>
                                     <div class="flex items-center space-x-8">
-                                        <button class="rounded-2xl border bg-neutral-100 px-3 text-slate-700 py-1 text-xs font-semibold">id: 15</button>
-                                        <div class="text-xs text-neutral-500">2024-05-01 15:12:12</div>
+                                        <button class="rounded-2xl border bg-neutral-100 px-3 text-slate-700 py-1 text-xs font-semibold">id: {{ $item->id }}</button>
+                                        <div class="text-xs text-neutral-500">{{ $item->created_at }}</div>
                                     </div>
                                 </div>
                                 <div class="mt-4 mb-2">
-                                    <div class="mb-3 text-xl text-slate-700 font-bold">Nulla sed leo tempus, feugiat velit vel, rhoncus neque?</div>
+                                    <div class="mb-3 text-xl text-slate-700 font-bold">{{ $item->subject }}</div>
                                     <div class="text-sm text-neutral-600">
-                                        Aliquam a tristique sapien, nec bibendum urna. Maecenas convallis dignissim turpis, non suscipit mauris interdum at. 
-                                        Morbi sed gravida nisl, a pharetra nulla. Etiam tincidunt turpis leo, ut mollis ipsum consectetur quis. Etiam faucibus 
-                                        est risus, ac condimentum mauris consequat nec. Curabitur eget feugiat massa
+                                        {{ $item->message }}
                                     </div>
                                 </div>
                                 <div>
                                     <div class="flex items-center justify-between text-slate-500">
                                         <div class="flex space-x-4 md:space-x-8">
-                                            elshod@gmail.com
+                                            {{ $item->user->email }}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class='mt-3'>  
-                            <div class="rounded-xl border p-5 shadow-md w-12/12 bg-white">
-                                <div class="flex w-full items-center justify-between border-b pb-3">
-                                    <div class="flex items-center space-x-3">
-                                        <div class="h-8 w-8 rounded-full bg-slate-400 bg-[url('https://i.pravatar.cc/32')]"></div>
-                                        <div class="text-lg font-bold text-slate-700">Joe Smith</div>
-                                    </div>
-                                    <div class="flex items-center space-x-8">
-                                        <button class="rounded-2xl border bg-neutral-100 px-3 text-slate-700 py-1 text-xs font-semibold">id: 15</button>
-                                        <div class="text-xs text-neutral-500">2024-05-01 15:12:12</div>
-                                    </div>
-                                </div>
-                                <div class="mt-4 mb-2">
-                                    <div class="mb-3 text-xl text-slate-700 font-bold">Nulla sed leo tempus, feugiat velit vel, rhoncus neque?</div>
-                                    <div class="text-sm text-neutral-600">
-                                        Aliquam a tristique sapien, nec bibendum urna. Maecenas convallis dignissim turpis, non suscipit mauris interdum at. 
-                                        Morbi sed gravida nisl, a pharetra nulla. Etiam tincidunt turpis leo, ut mollis ipsum consectetur quis. Etiam faucibus 
-                                        est risus, ac condimentum mauris consequat nec. Curabitur eget feugiat massa
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex items-center justify-between text-slate-500">
-                                        <div class="flex space-x-4 md:space-x-8">
-                                            elshod@gmail.com
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='mt-3'>  
-                            <div class="rounded-xl border p-5 shadow-md w-12/12 bg-white">
-                                <div class="flex w-full items-center justify-between border-b pb-3">
-                                    <div class="flex items-center space-x-3">
-                                        <div class="h-8 w-8 rounded-full bg-slate-400 bg-[url('https://i.pravatar.cc/32')]"></div>
-                                        <div class="text-lg font-bold text-slate-700">Joe Smith</div>
-                                    </div>
-                                    <div class="flex items-center space-x-8">
-                                        <button class="rounded-2xl border bg-neutral-100 px-3 text-slate-700 py-1 text-xs font-semibold">id: 15</button>
-                                        <div class="text-xs text-neutral-500">2024-05-01 15:12:12</div>
-                                    </div>
-                                </div>
-                                <div class="mt-4 mb-2">
-                                    <div class="mb-3 text-xl text-slate-700 font-bold">Nulla sed leo tempus, feugiat velit vel, rhoncus neque?</div>
-                                    <div class="text-sm text-neutral-600">
-                                        Aliquam a tristique sapien, nec bibendum urna. Maecenas convallis dignissim turpis, non suscipit mauris interdum at. 
-                                        Morbi sed gravida nisl, a pharetra nulla. Etiam tincidunt turpis leo, ut mollis ipsum consectetur quis. Etiam faucibus 
-                                        est risus, ac condimentum mauris consequat nec. Curabitur eget feugiat massa
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex items-center justify-between text-slate-500">
-                                        <div class="flex space-x-4 md:space-x-8">
-                                            elshod@gmail.com
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class='mt-3'>  
-                            <div class="rounded-xl border p-5 shadow-md w-12/12 bg-white">
-                                <div class="flex w-full items-center justify-between border-b pb-3">
-                                    <div class="flex items-center space-x-3">
-                                        <div class="h-8 w-8 rounded-full bg-slate-400 bg-[url('https://i.pravatar.cc/32')]"></div>
-                                        <div class="text-lg font-bold text-slate-700">Joe Smith</div>
-                                    </div>
-                                    <div class="flex items-center space-x-8">
-                                        <button class="rounded-2xl border bg-neutral-100 px-3 text-slate-700 py-1 text-xs font-semibold">id: 15</button>
-                                        <div class="text-xs text-neutral-500">2024-05-01 15:12:12</div>
-                                    </div>
-                                </div>
-                                <div class="mt-4 mb-2">
-                                    <div class="mb-3 text-xl text-slate-700 font-bold">Nulla sed leo tempus, feugiat velit vel, rhoncus neque?</div>
-                                    <div class="text-sm text-neutral-600">
-                                        Aliquam a tristique sapien, nec bibendum urna. Maecenas convallis dignissim turpis, non suscipit mauris interdum at. 
-                                        Morbi sed gravida nisl, a pharetra nulla. Etiam tincidunt turpis leo, ut mollis ipsum consectetur quis. Etiam faucibus 
-                                        est risus, ac condimentum mauris consequat nec. Curabitur eget feugiat massa
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex items-center justify-between text-slate-500">
-                                        <div class="flex space-x-4 md:space-x-8">
-                                            elshod@gmail.com
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
+                        <br>
+                        {{ $application->links() }}
                     @else
                     <div class='flex items-center'>
                         <div class='w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg shadow-xl'>
@@ -148,7 +63,6 @@
 
                                     <input type="submit" class="py-3 px-6 my-2 bg-emerald-500 text-white font-medium rounded hover:bg-indigo-500 cursor-pointer ease-in-out duration-300" value="Send">
                                 </form>
-
                             </div>
                         </div>
                     </div>
